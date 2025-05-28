@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Factory.csproj", "{AC0ED229-F57C-430A-9052-1BC98B2805E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guess the number", "..\Guess the number\Guess the number.csproj", "{8D7E0752-F980-4736-9C1D-6AAB85D9E7A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{AC0ED229-F57C-430A-9052-1BC98B2805E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC0ED229-F57C-430A-9052-1BC98B2805E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC0ED229-F57C-430A-9052-1BC98B2805E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7E0752-F980-4736-9C1D-6AAB85D9E7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7E0752-F980-4736-9C1D-6AAB85D9E7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7E0752-F980-4736-9C1D-6AAB85D9E7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7E0752-F980-4736-9C1D-6AAB85D9E7A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E84DE2D6-3069-4F6E-8034-530301FF7A3F}
 	EndGlobalSection
 EndGlobal
