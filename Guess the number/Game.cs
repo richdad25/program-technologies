@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GuessNumberGame
 {
@@ -144,13 +145,21 @@ namespace GuessNumberGame
         static void Main(string[] args)
         {
             // Композиция корня приложения
-            var settings = new DefaultGameSettings();
+            var settings = new ServiceCollection()
+                .AddTransient<IGameSettings, DefaultGameSettings>()
+                .AddTransient<INumberGenerator, RandomNumberGenerator>()
+                .AddTransient<IUserInput, ConsoleUserInput>()
+                .AddTransient<IUserOutput, ConsoleUserOutput>()
+                .AddSingleton<GuessNumberGame>();
+            using var serviceProvider = settings.BuildServiceProvider();
+             var GuessNumberGame = serviceProvider.GetService<GuessNumberGame>();
+
+
             var numberGenerator = new RandomNumberGenerator();
             var input = new ConsoleUserInput();
             var output = new ConsoleUserOutput();
 
-            var game = new GuessNumberGame(input, output, settings, numberGenerator);
-            game.Play();
+            GuessNumberGame.Play();
         }
     }
 }
